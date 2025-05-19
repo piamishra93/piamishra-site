@@ -7,14 +7,19 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "../../../data/blog-posts";
 import type { Metadata } from "next";
 
+// ✅ Define this once — Next.js expects exactly this shape
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
 function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export default function BlogPostPage(props: { params: Record<string, string> }) {
-  const { slug } = props.params;
-  const post = getPostBySlug(slug);
+export default function BlogPostPage({ params }: PageProps) {
+  const post = getPostBySlug(params.slug);
 
   if (!post) notFound();
 
@@ -81,9 +86,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata(
-  { params }: { params: { slug: string } }
-): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
 
