@@ -34,11 +34,12 @@ export default function BlogPostPage({ params }: PageProps) {
 
         <article>
           <header className="mb-16">
-            <span className="text-xs uppercase tracking-widest text-foreground/60 mb-4 block">{post.date}</span>
+            <span className="text-xs uppercase tracking-widest text-foreground/60 mb-4 block">
+              {post.date}
+            </span>
             <h1 className="text-2xl md:text-3xl font-serif font-normal tracking-tight text-foreground mb-8">
               {post.title}
             </h1>
-
             <div className="flex items-center justify-between">
               <div className="flex space-x-4">
                 {post.categories.map((category) => (
@@ -47,7 +48,9 @@ export default function BlogPostPage({ params }: PageProps) {
                   </span>
                 ))}
               </div>
-              <span className="text-xs uppercase tracking-widest text-foreground/60">{post.readTime} min read</span>
+              <span className="text-xs uppercase tracking-widest text-foreground/60">
+                {post.readTime} min read
+              </span>
             </div>
           </header>
 
