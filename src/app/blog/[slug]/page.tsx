@@ -4,18 +4,15 @@ import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import { blogPosts } from "../../../data/blog-posts"
 
+// ✅ Inline definition of Props
 type Props = {
   params: {
     slug: string
   }
 }
 
-function getPostBySlug(slug: string) {
-  return blogPosts.find((post) => post.slug === slug)
-}
-
 export default function BlogPostPage({ params }: Props) {
-  const post = getPostBySlug(params.slug)
+  const post = blogPosts.find((p) => p.slug === params.slug)
 
   if (!post) {
     notFound()
