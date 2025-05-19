@@ -89,3 +89,4 @@ export async function generateMetadata({ params }) {
     description: post.excerpt || post.content.slice(0, 160),
   };
 }
+// force rebuild
