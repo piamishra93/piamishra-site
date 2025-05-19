@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -8,7 +10,6 @@ interface BlogPostPageProps {
   params: { slug: string };
 }
 
-// Helper to find post by slug
 function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
@@ -75,14 +76,12 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   );
 }
 
-// Tell Next.js which slugs to pre-render
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-// (Optional) SEO metadata for the post
 export async function generateMetadata({ params }: BlogPostPageProps) {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
