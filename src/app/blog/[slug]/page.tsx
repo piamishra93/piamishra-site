@@ -6,16 +6,13 @@ import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { blogPosts } from "../../../data/blog-posts";
 import type { Metadata } from "next";
+import type { FC } from "react";
 
 function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-export default function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+const BlogPostPage: FC<{ params: { slug: string } }> = ({ params }) => {
   const post = getPostBySlug(params.slug);
 
   if (!post) notFound();
@@ -75,7 +72,9 @@ export default function BlogPostPage({
       </main>
     </div>
   );
-}
+};
+
+export default BlogPostPage;
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
