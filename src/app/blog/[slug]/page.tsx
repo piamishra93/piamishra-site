@@ -11,9 +11,10 @@ function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-// ⛑ Force-cast to any to avoid PageProps constraint issues
-export default function BlogPostPage({ params }: any) {
-  const post = getPostBySlug(params.slug);
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export default function BlogPostPage(props: { params: Record<string, string> }) {
+  const { slug } = props.params;
+  const post = getPostBySlug(slug);
 
   if (!post) notFound();
 
