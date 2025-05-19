@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { blogPosts } from "../../../data/blog-posts";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 
 interface BlogPostPageProps {
   params: { slug: string };
@@ -83,10 +83,8 @@ export async function generateStaticParams() {
   }));
 }
 
-// ✅ This version uses correct types so it won't break Vercel
 export async function generateMetadata(
-  { params }: { params: { slug: string } },
-  _parent?: ResolvingMetadata
+  { params }: { params: { slug: string } }
 ): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
