@@ -2,7 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
-import { blogPosts } from "@/data/blog-posts"
+import { blogPosts } from "../../../data/blog-posts"
+
 
 // ✅ Replace your custom type with this import
 import type { PageProps } from "next"
