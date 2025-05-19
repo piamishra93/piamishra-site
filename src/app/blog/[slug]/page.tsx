@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import { blogPosts } from "../../../data/blog-posts"
 
-type PageProps = {
+type Props = {
   params: {
     slug: string
   }
@@ -14,7 +14,7 @@ function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug)
 }
 
-export default function BlogPostPage({ params }: PageProps) {
+export default function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug)
 
   if (!post) {
@@ -31,12 +31,9 @@ export default function BlogPostPage({ params }: PageProps) {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to journal
         </Link>
-
         <article>
           <header className="mb-16">
-            <span className="text-xs uppercase tracking-widest text-foreground/60 mb-4 block">
-              {post.date}
-            </span>
+            <span className="text-xs uppercase tracking-widest text-foreground/60 mb-4 block">{post.date}</span>
             <h1 className="text-2xl md:text-3xl font-serif font-normal tracking-tight text-foreground mb-8">
               {post.title}
             </h1>
@@ -48,9 +45,7 @@ export default function BlogPostPage({ params }: PageProps) {
                   </span>
                 ))}
               </div>
-              <span className="text-xs uppercase tracking-widest text-foreground/60">
-                {post.readTime} min read
-              </span>
+              <span className="text-xs uppercase tracking-widest text-foreground/60">{post.readTime} min read</span>
             </div>
           </header>
 
