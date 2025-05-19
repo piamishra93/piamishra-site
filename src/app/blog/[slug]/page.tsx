@@ -4,7 +4,6 @@ import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import { blogPosts } from "@/data/blog-posts"
 
-import { Metadata } from "next"
 
 type BlogPostPageProps = {
   params: {
