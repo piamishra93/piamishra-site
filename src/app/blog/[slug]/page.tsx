@@ -2,24 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
-import blogPosts from "../../../data/blog-posts";
+import { blogPosts } from "../../../data/blog-posts";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
+interface BlogPostPageProps {
+  params: { slug: string };
+}
 
+// Helper to find post by slug
 function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-export default function BlogPostPage({ params }: Props) {
+export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post = getPostBySlug(params.slug);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
   return (
     <div className="min-h-screen bg-background">
@@ -31,21 +28,29 @@ export default function BlogPostPage({ params }: Props) {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to journal
         </Link>
+
         <article>
           <header className="mb-16">
-            <span className="text-xs uppercase tracking-widest text-foreground/60 mb-4 block">{post.date}</span>
+            <span className="text-xs uppercase tracking-widest text-foreground/60 mb-4 block">
+              {post.date}
+            </span>
             <h1 className="text-2xl md:text-3xl font-serif font-normal tracking-tight text-foreground mb-8">
               {post.title}
             </h1>
             <div className="flex items-center justify-between">
               <div className="flex space-x-4">
                 {post.categories.map((category) => (
-                  <span key={category} className="text-xs uppercase tracking-widest text-foreground/60">
+                  <span
+                    key={category}
+                    className="text-xs uppercase tracking-widest text-foreground/60"
+                  >
                     {category}
                   </span>
                 ))}
               </div>
-              <span className="text-xs uppercase tracking-widest text-foreground/60">{post.readTime} min read</span>
+              <span className="text-xs uppercase tracking-widest text-foreground/60">
+                {post.readTime} min read
+              </span>
             </div>
           </header>
 
@@ -68,4 +73,22 @@ export default function BlogPostPage({ params }: Props) {
       </main>
     </div>
   );
+}
+
+// Tell Next.js which slugs to pre-render
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
+// (Optional) SEO metadata for the post
+export async function generateMetadata({ params }: BlogPostPageProps) {
+  const post = getPostBySlug(params.slug);
+  if (!post) return {};
+
+  return {
+    title: post.title,
+    description: post.excerpt || post.content.slice(0, 160),
+  };
 }
