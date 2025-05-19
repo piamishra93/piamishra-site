@@ -4,16 +4,17 @@ import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import { blogPosts } from "../../../data/blog-posts"
 
-
-// ✅ Replace your custom type with this import
-import type { PageProps } from "next"
+type BlogPostPageProps = {
+  params: {
+    slug: string
+  }
+}
 
 function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug)
 }
 
-// ✅ Remove `async`, because we're not awaiting anything
-export default function BlogPostPage({ params }: PageProps) {
+export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post = getPostBySlug(params.slug)
 
   if (!post) {
