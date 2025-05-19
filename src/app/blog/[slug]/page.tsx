@@ -7,15 +7,15 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "../../../data/blog-posts";
 import type { Metadata } from "next";
 
-interface BlogPostPageProps {
-  params: { slug: string };
-}
-
 function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default function BlogPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post = getPostBySlug(params.slug);
 
   if (!post) notFound();
