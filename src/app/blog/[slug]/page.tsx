@@ -1,20 +1,14 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-import { notFound } from "next/navigation";
-import { blogPosts } from "../../../data/blog-posts";
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
+import { notFound } from "next/navigation"
+import { blogPosts } from "../../../data/blog-posts"
 
-// ✅ Define props inline to avoid broken PageProps type inference
-export default function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+// ✅ This is the correct inline type definition for app directory dynamic routes
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = blogPosts.find((post) => post.slug === params.slug)
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound()
 
   return (
     <div className="min-h-screen bg-background">
@@ -69,5 +63,5 @@ export default function BlogPostPage({
         </article>
       </main>
     </div>
-  );
+  )
 }
