@@ -14,10 +14,10 @@ export async function fetchSubstackPosts(feedUrl: string): Promise<SubstackPost[
   const json = await parseStringPromise(xml);
 
   const items = json.rss.channel[0].item;
-  return items.map((item: any) => ({
-    title: item.title[0],
-    link: item.link[0],
-    pubDate: item.pubDate[0],
-    description: item.description[0],
+  return items.map((item: Record<string, unknown>) => ({
+    title: (item as any).title[0],
+    link: (item as any).link[0],
+    pubDate: (item as any).pubDate[0],
+    description: (item as any).description[0],
   }));
 }

@@ -19,7 +19,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="mb-28 md:mb-40">
           <h1 className="text-3xl md:text-4xl font-serif font-normal tracking-tight text-foreground mb-10 max-w-2xl">
-            Hi, I'm Pia
+            Hi, I&apos;m Pia
           </h1>
           <p className="text-base md:text-lg text-foreground/80 max-w-xl mb-10 font-serif leading-relaxed">
             I like to think, imagine, express. Welcome.
@@ -37,7 +37,7 @@ export default function Home() {
         <section className="mb-28 md:mb-40">
           <h2 className="text-sm uppercase tracking-widest mb-12 text-foreground/90">Recent Thoughts</h2>
           <div className="grid gap-16 md:grid-cols-2">
-            {featuredPosts.map((post: Post, idx: number) => (
+            {featuredPosts.map((post: Post) => (
               <article key={post.id} className="group">
                 <Link href={`/blog/${post.slug}`}>
                   <div className="mb-6 overflow-hidden">
