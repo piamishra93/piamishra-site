@@ -39,7 +39,7 @@ export default function Home() {
           <div className="grid gap-16 md:grid-cols-2">
             {featuredPosts.map((post: Post, idx: number) => (
               <article key={post.id} className="group">
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/ideas/${post.slug}`}>
                   <div className="mb-6 overflow-hidden">
                     <Image
                       src={post.image || "/placeholder.svg"}
@@ -58,10 +58,10 @@ export default function Home() {
           </div>
           <div className="mt-16">
             <Link
-              href="/blog"
+              href="/ideas"
               className="inline-flex items-center text-foreground/90 border-b border-foreground/30 pb-1 hover:border-foreground transition-colors text-sm uppercase tracking-widest"
             >
-              View all posts
+              View all ideas
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
