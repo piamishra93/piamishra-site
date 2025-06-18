@@ -24,7 +24,7 @@ export async function fetchSubstackPosts(feedUrl: string): Promise<SubstackPost[
       ? json.rss.channel.item 
       : [json.rss.channel.item];
       
-    return items.map((item: any) => ({
+    return items.map((item: Record<string, string | Record<string, string>>) => ({
       title: typeof item.title === 'string' ? item.title : item.title['_'] || item.title,
       link: typeof item.link === 'string' ? item.link : item.link['_'] || item.link,
       pubDate: typeof item.pubdate === 'string' ? item.pubdate : item.pubdate['_'] || item.pubdate,

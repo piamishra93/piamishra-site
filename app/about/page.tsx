@@ -8,7 +8,7 @@ export default function AboutPage() {
           </h1>
           <div className="max-w-2xl space-y-6">
             <p className="text-base md:text-lg text-foreground/80 font-serif leading-relaxed">
-              Welcome to my corner of the internet. I'm Pia, and I like to think, imagine, and express.
+              Welcome to my corner of the internet. I&apos;m Pia, and I like to think, imagine, and express.
             </p>
             <p className="text-base md:text-lg text-foreground/80 font-serif leading-relaxed">
               This space is where I share my thoughts, ideas, and reflections on the world around us. 
