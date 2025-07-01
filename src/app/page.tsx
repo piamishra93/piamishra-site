@@ -3,16 +3,6 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { fetchSubstackPosts, SubstackPost } from "@/lib/fetchSubstackPosts"
 
-// Define the Post type
-type Post = {
-  id: number;
-  title: string;
-  slug: string;
-  excerpt: string;
-  date: string;
-  image: string;
-};
-
 export default async function Home() {
   // Fetch actual Substack posts
   const substackPosts = await fetchSubstackPosts('https://productsalon.substack.com/feed');
