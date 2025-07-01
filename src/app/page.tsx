@@ -81,23 +81,3 @@ export default async function Home() {
     </div>
   )
 }
-
-// Sample data
-const featuredPosts: Post[] = [
-  {
-    id: 1,
-    title: "Piece No. 4: Philips Hue Light Bulbs",
-    slug: "piece-no-four-philips",
-    excerpt: "Reflecting on light in our spaces.",
-    date: "May 7, 2025",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 2,
-    title: "Piece No. 3: Granola",
-    slug: "piece-no-three-granola",
-    excerpt: "Admiring an AI first application for age old workflow",
-    date: "April 15, 2025",
-    image: "/placeholder.svg",
-  },
-];

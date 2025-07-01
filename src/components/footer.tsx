@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm uppercase tracking-widest mb-4 text-foreground/90">About</h3>
             <p className="text-sm text-foreground/70 font-serif leading-relaxed">
-              I'm Pia. Welcome.
+              I&apos;m Pia. Welcome.
             </p>
           </div>
 
