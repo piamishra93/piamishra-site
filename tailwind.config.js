@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        border: "var(--foreground)",
       },
       fontFamily: {
         sans: ["var(--font-dm-sans)"],
@@ -34,22 +36,19 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    function ({ addUtilities }) {
-      const newUtilities = {
-        '.line-clamp-2': {
-          overflow: 'hidden',
-          display: '-webkit-box',
-          '-webkit-box-orient': 'vertical',
-          '-webkit-line-clamp': '2',
+    function ({ addBase, theme }) {
+      addBase({
+        ':root': {
+          '--background': '#fafafa',
+          '--foreground': '#171717',
         },
-        '.line-clamp-3': {
-          overflow: 'hidden',
-          display: '-webkit-box',
-          '-webkit-box-orient': 'vertical',
-          '-webkit-line-clamp': '3',
+        '@media (prefers-color-scheme: dark)': {
+          ':root': {
+            '--background': '#0a0a0a',
+            '--foreground': '#ededed',
+          },
         },
-      }
-      addUtilities(newUtilities)
-    }
+      })
+    },
   ],
 }

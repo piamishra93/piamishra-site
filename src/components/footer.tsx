@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* About */}
           <div>
-            <h3 className="text-sm uppercase tracking-widest mb-4 text-foreground/90">About</h3>
+            <h3 className="text-sm uppercase tracking-widest mb-4 text-foreground/60">About</h3>
             <p className="text-sm text-foreground/70 font-serif leading-relaxed">
               I&apos;m Pia. Welcome.
             </p>
@@ -15,12 +15,12 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-sm uppercase tracking-widest mb-4 text-foreground/90">Navigation</h3>
+            <h3 className="text-sm uppercase tracking-widest mb-4 text-foreground/60">Navigation</h3>
             <ul className="space-y-2">
               <li>
                 <Link 
                   href="/" 
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif"
+                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif no-underline"
                 >
                   Home
                 </Link>
@@ -28,7 +28,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/about" 
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif"
+                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif no-underline"
                 >
                   About
                 </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/journal" 
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif"
+                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif no-underline"
                 >
                   Journal
                 </Link>
@@ -46,14 +46,14 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h3 className="text-sm uppercase tracking-widest mb-4 text-foreground/90">Connect</h3>
+            <h3 className="text-sm uppercase tracking-widest mb-4 text-foreground/60">Connect</h3>
             <ul className="space-y-2">
               <li>
                 <Link 
                   href="https://x.com/piamishra" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif"
+                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif no-underline"
                 >
                   Twitter
                 </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/piamishra/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif"
+                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif no-underline"
                 >
                   LinkedIn
                 </Link>
@@ -73,7 +73,7 @@ export default function Footer() {
                   href="https://github.com/piamishra93" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif"
+                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif no-underline"
                 >
                   GitHub
                 </Link>
@@ -81,7 +81,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="mailto:piamishra93@gmail.com"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif"
+                  className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif no-underline"
                 >
                   Email
                 </Link>

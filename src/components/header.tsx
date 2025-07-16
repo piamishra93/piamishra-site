@@ -7,27 +7,27 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <Link 
             href="/" 
-            className="text-lg font-serif font-medium text-foreground"
+            className="text-lg font-serif text-foreground hover:text-foreground/80 transition-colors no-underline"
           >
             Pia Mishra
           </Link>
           
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-12">
             <Link 
               href="/" 
-              className="text-sm uppercase tracking-widest text-foreground/70 hover:text-foreground transition-colors"
+              className="text-sm uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors no-underline"
             >
               Home
             </Link>
             <Link 
               href="/about" 
-              className="text-sm uppercase tracking-widest text-foreground/70 hover:text-foreground transition-colors"
+              className="text-sm uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors no-underline"
             >
               About
             </Link>
             <Link 
               href="/journal" 
-              className="text-sm uppercase tracking-widest text-foreground/70 hover:text-foreground transition-colors"
+              className="text-sm uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors no-underline"
             >
               Journal
             </Link>

@@ -1,18 +1,13 @@
 # Pia Mishra's Personal Website
 
-A minimalist personal website built with Next.js, TypeScript, and Tailwind CSS. Features integration with Substack for blog posts.
+This is the personal website of Pia Mishra, built with Next.js, TypeScript, and Tailwind CSS. The site features an about page, journal integration with Substack, and a minimalist design aesthetic.
 
 ## Features
 
-- Clean, typography-focused design
-- Responsive layout
-- Substack integration for blog posts
-- Dark/light mode support
-- Built with modern technologies:
-  - Next.js 14
-  - TypeScript
-  - Tailwind CSS
-  - React Server Components
+- About page with professional background
+- Journal integration with Product Salon (Substack)
+- Responsive design
+- Modern tech stack: Next.js, TypeScript, Tailwind CSS
 
 ## Development
 
@@ -27,11 +22,17 @@ npm run dev
 npm run build
 
 # Start production server
-npm start
+npm run start
 ```
 
-## Structure
+## Tech Stack
 
-- `/src/app/*` - Next.js app router pages
-- `/src/components/*` - React components
-- `/src/lib/*` - Utility functions and API integrations 
+- Next.js 15.3
+- React 19
+- TypeScript
+- Tailwind CSS
+- Tailwind Typography
+
+## Deployment
+
+The site is deployed on Vercel. 
