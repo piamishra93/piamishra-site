@@ -26,7 +26,7 @@ export default function Header() {
               About
             </Link>
             <Link 
-              href="/blog" 
+              href="/journal" 
               className="text-sm uppercase tracking-widest text-foreground/70 hover:text-foreground transition-colors"
             >
               Journal

@@ -35,7 +35,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/blog" 
+                  href="/journal" 
                   className="text-sm text-foreground/70 hover:text-foreground transition-colors font-serif"
                 >
                   Journal

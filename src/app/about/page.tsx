@@ -12,15 +12,15 @@ export default function AboutPage() {
 
             <div className="prose prose-gray max-w-none font-serif">
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                Hi! I'm Pia Mishra, a product manager based in New York. I'm passionate about the intersection of design, beauty and business.
+                Hi! I&apos;m Pia Mishra, a product manager based in New York. I&apos;m passionate about the intersection of design and business.
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                I spent a number of years studying businesses of all stages at Goldman Sachs & CapitalG. The last few years I've been at Notion learning more about what it means to build beautiful products that form the foundations of great businesses.
+                I spent a number of years studying companies of all stages at Goldman Sachs & CapitalG. The last few years I&apos;ve been at Notion learning more about what it means to build beautiful products that form the foundations of great businesses.
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                When I'm not working, you can find me reading, with friends or wandering through galleries, boutiques or other thoughtfully curated spaces. 
+                When I&apos;m not working, you can find me reading, with friends or wandering through galleries, boutiques or other thoughtfully curated spaces. 
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
@@ -28,7 +28,7 @@ export default function AboutPage() {
               </p>
 
               <p className="text-base text-foreground/80 mb-10 leading-relaxed">
-                I'm always open to new opportunities, collaborations, or just a friendly chat. Don't hesitate to reach
+                I&apos;m always open to new opportunities, collaborations, or just a friendly chat. Don&apos;t hesitate to reach
                 out!
               </p>
 
@@ -45,11 +45,12 @@ export default function AboutPage() {
           <div>
             <div className="sticky top-24">
               <Image
-                src="/placeholder.svg?height=800&width=600"
-                alt="Your Name"
+                src="/pia.jpg"
+                alt="Pia Mishra"
                 width={600}
                 height={800}
-                className="w-full object-cover grayscale"
+                className="w-full min-h-[400px] min-w-[300px] object-cover"
+                priority
               />
 
               <div className="mt-16 space-y-12">
@@ -91,7 +92,7 @@ export default function AboutPage() {
   )
 }
 
-// Sample data
+// Placeholder data
 const experiences = [
   {
     id: 1,

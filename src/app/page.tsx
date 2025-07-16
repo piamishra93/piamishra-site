@@ -1,12 +1,9 @@
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { fetchSubstackPosts, SubstackPost } from "@/lib/fetchSubstackPosts"
 
 export default async function Home() {
-  // Fetch actual Substack posts
   const substackPosts = await fetchSubstackPosts('https://productsalon.substack.com/feed');
-  // Take first 2 posts for featured section
   const featuredPosts = substackPosts.slice(0, 2);
 
   return (
@@ -36,30 +33,26 @@ export default async function Home() {
             {featuredPosts.map((post: SubstackPost, index: number) => (
               <article key={post.link} className="group">
                 <Link href={post.link} target="_blank" rel="noopener noreferrer">
-                  <div className="mb-6 overflow-hidden">
-                    <Image
-                      src={index === 0 ? "/philips-hue.jpg" : "/placeholder.svg"}
-                      alt={post.title}
-                      width={600}
-                      height={400}
-                      className="object-cover w-full h-[320px] group-hover:scale-105 transition-transform duration-700 ease-out grayscale hover:grayscale-0"
-                    />
-                  </div>
                   <span className="text-xs uppercase tracking-widest text-foreground/60 mb-3 block">
-                    {new Date(post.pubDate).toLocaleDateString()}
+                    {new Date(post.pubDate).toLocaleDateString('en-US', {
+                      month: 'long',
+                      day: 'numeric',
+                      year: 'numeric'
+                    }).toUpperCase()}
                   </span>
-                  <h3 className="text-lg font-serif mb-3 text-foreground">{post.title}</h3>
-                  <div
-                    className="prose prose-sm text-foreground/70 mb-3 font-serif text-sm leading-relaxed line-clamp-3"
-                    dangerouslySetInnerHTML={{ __html: post.description }}
-                  />
+                  <h3 className="text-lg font-serif mb-3 text-foreground">
+                    Piece No. {4 - index}: {post.title}
+                  </h3>
+                  <p className="text-foreground/70 mb-3 font-serif text-sm leading-relaxed">
+                    {post.description.replace(/<[^>]*>/g, '')}
+                  </p>
                 </Link>
               </article>
             ))}
           </div>
           <div className="mt-16">
             <Link
-              href="/blog"
+              href="/journal"
               className="inline-flex items-center text-foreground/90 border-b border-foreground/30 pb-1 hover:border-foreground transition-colors text-sm uppercase tracking-widest"
             >
               View all posts
