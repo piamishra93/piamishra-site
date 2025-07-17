@@ -20,6 +20,12 @@ const garamond = EB_Garamond({
 export const metadata: Metadata = {
   title: "Pia Mishra | Personal Website",
   description: "Personal website and blog of Pia Mishra",
+  icons: {
+    icon: '/favicon.ico',
+    // You can also specify additional formats and sizes:
+    // apple: '/apple-icon.png',
+    // shortcut: '/shortcut-icon.png',
+  },
 }
 
 export default function RootLayout({
