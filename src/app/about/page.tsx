@@ -8,7 +8,7 @@ export default function AboutPage() {
       <main className="max-w-4xl mx-auto px-6 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
           <div>
-            <h1 className="text-sm uppercase tracking-widest mb-16 text-foreground/90">About</h1>
+            <h1 className="text-sm uppercase tracking-widest mb-8 text-foreground/90">About</h1>
 
             <div className="prose prose-gray max-w-none font-serif">
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
