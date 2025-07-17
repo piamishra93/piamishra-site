@@ -24,7 +24,7 @@ export default function AboutPage() {
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                This website serves as a space for me to share my thoughts, work, and connect with like-minded individuals. Feel free to explore my journal where I write about products I love.
+                This website serves as a space for me to share my thoughts, work, and connect with like-minded individuals. Feel free to explore my ideas where I write about products I love.
               </p>
 
               <p className="text-base text-foreground/80 mb-10 leading-relaxed">
