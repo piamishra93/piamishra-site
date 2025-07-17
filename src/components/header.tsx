@@ -31,6 +31,12 @@ export default function Header() {
             >
               Journal
             </Link>
+            <Link 
+              href="/views" 
+              className="text-sm uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors no-underline"
+            >
+              Views
+            </Link>
           </div>
         </nav>
       </div>
