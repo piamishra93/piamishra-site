@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="px-6 py-8 md:py-12">
       <div className="max-w-4xl mx-auto">
-        <nav className="flex items-center justify-center md:justify-between">
+        <nav className="flex items-center justify-start md:justify-between">
           <Link
             href="/"
             className="hidden md:block text-sm uppercase tracking-widest text-foreground hover:text-foreground/80 transition-colors no-underline"
