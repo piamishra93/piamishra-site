@@ -18,7 +18,7 @@ const garamond = EB_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Pia Mishra | Personal Website",
+  title: "Pia Mishra",
   description: "Personal website and blog of Pia Mishra",
   icons: {
     icon: '/favicon.ico',
