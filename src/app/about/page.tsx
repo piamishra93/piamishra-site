@@ -16,7 +16,7 @@ export default function AboutPage() {
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                I spent a number of years studying companies of all stages at Goldman Sachs & CapitalG. The last few years I&apos;ve been at Notion learning more about what it means to build beautiful products that form the foundations of great businesses.
+                I spent a number of years studying companies of all stages at Goldman Sachs and CapitalG. The last few years I&apos;ve been at Notion learning more about what it means to build beautiful products that form the foundations of great businesses.
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
@@ -34,7 +34,7 @@ export default function AboutPage() {
 
               <Link
                 href="https://x.com/piamishra"
-                className="inline-flex items-center text-foreground/90 border-b border-foreground/30 pb-1 hover:border-foreground transition-colors text-sm uppercase tracking-widest"
+                className="inline-flex items-center text-sm uppercase tracking-widest text-foreground/90 hover:text-foreground transition-colors no-underline font-sans font-normal"
               >
                 Get in touch
                 <ArrowRight className="ml-2 h-4 w-4" />
