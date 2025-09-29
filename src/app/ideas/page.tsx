@@ -18,7 +18,7 @@ export default async function IdeasPage() {
               rel="noopener noreferrer"
               className="group"
             >
-              <article className="h-48 bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-300 cursor-pointer">
+              <article className="h-48 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 cursor-pointer">
                 <div className="flex flex-col h-full justify-between">
                   <div>
                     <span className="text-xs uppercase tracking-widest text-foreground/60 mb-3 block">
