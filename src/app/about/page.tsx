@@ -23,10 +23,6 @@ export default function AboutPage() {
                 When I&apos;m not working, you can find me reading, with friends or wandering through galleries, boutiques or other thoughtfully curated spaces. 
               </p>
 
-              <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                This website serves as a space for me to share my thoughts, work, and connect with like-minded individuals. Feel free to explore my ideas where I write about products I love.
-              </p>
-
               <p className="text-base text-foreground/80 mb-10 leading-relaxed">
                 I&apos;m always open to new opportunities, collaborations, or just a friendly chat. Don&apos;t hesitate to reach
                 out!
