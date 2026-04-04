@@ -20,15 +20,10 @@ export default function AboutPage() {
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                Outside of work, I am usually found with a book, in a beautiful space, at a yoga studio or with friends. Always happy to chat!
+                Outside of work, I am usually found with a book, in a thoughtful space, at a yoga studio or with friends. Always happy to chat!
               </p>
 
-              <p className="text-base text-foreground/80 mb-10 leading-relaxed">
-                I&apos;m always open to new opportunities, collaborations, or just a friendly chat. Don&apos;t hesitate to reach
-                out!
-              </p>
-
-              <Link
+<Link
                 href="https://x.com/piamishra"
                 className="inline-flex items-center text-sm uppercase tracking-widest text-foreground/90 hover:text-foreground transition-colors no-underline font-sans font-normal"
               >
