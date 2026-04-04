@@ -12,7 +12,7 @@ export default function AboutPage() {
 
             <div className="prose prose-gray max-w-none font-serif">
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                Hi! I&apos;m Pia Mishra, a product manager based in New York. I&apos;m passionate about the intersection of design and business.
+                Hi! I&apos;m Pia Mishra, a product manager based in San Francisco. I&apos;m passionate about the intersection of design and business.
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
@@ -20,7 +20,7 @@ export default function AboutPage() {
               </p>
 
               <p className="text-base text-foreground/80 mb-8 leading-relaxed">
-                When I&apos;m not working, you can find me reading, with friends or wandering through galleries, boutiques or other thoughtfully curated spaces. 
+                Outside of work, I am usually found with a book, in a beautiful space, at a yoga studio or with friends. Always happy to chat!
               </p>
 
               <p className="text-base text-foreground/80 mb-10 leading-relaxed">
